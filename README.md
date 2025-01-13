@@ -1,4 +1,4 @@
-# code_practice
+# algorithms
 The res is for recoding the different type algorithm.
 
 # 链表 树 图
