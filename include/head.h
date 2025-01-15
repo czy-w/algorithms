@@ -14,6 +14,7 @@ typedef std::pair<int, int> Edge;
 const int MAX_VERTICES = 100;
 const int NO_EDGE = INT_MAX;
 
+
 struct ListNode {
     int val;
     ListNode* next;

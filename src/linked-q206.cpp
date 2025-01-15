@@ -1,4 +1,5 @@
 // 206 翻转一个链表
+
 #include "include/head.h"
 
 // 定义ListNode结构体
@@ -10,6 +11,11 @@ class Solution {
         ListNode(int x) : val(x), next(nullptr) {}
     };
 
+    // 递归法
+    // 基本情况：如果头节点为空，返回前一个节点
+    // 保存下一个节点
+    // 将当前节点指向前一个节点
+    // 递归处理下一个节点，并将当前节点作为新的前一个节点
     ListNode* reverseList(ListNode* head, ListNode* prev = nullptr) {
         if (!head) {
             return prev;
@@ -19,6 +25,11 @@ class Solution {
         return reverseList(next, head);
     }
 
+    // 迭代法
+    // 基本情况：如果头节点为空，返回前一个节点
+    // 保存下一个节点
+    // 将当前节点指向前一个节点
+    // 递归处理下一个节点，并将当前节点作为新的前一个节点
     ListNode* reverseListIterative(ListNode* head) {
         ListNode *prev = nullptr, *next;
         while (head) {
@@ -55,6 +66,8 @@ int main() {
         reversedHead = reversedHead->next;
         delete temp;
     }
+    std::cout << " Press Enter to exit... " << std::endl;
+    std::cin.get();
 
     return 0;
 }
